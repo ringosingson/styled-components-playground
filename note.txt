@@ -59,3 +59,28 @@ const color = "white"; //variable example
           </a>
         </header>
   </AppWrapper>
+
+6--
+//extending all the button property and adding new one
+const CancelButton = styled(Button)`
+  background: tomato;
+`;
+
+reference in styled components
+
+const Fake = ({ className }) => (
+  <div className={className}>
+    <h2>I'm a fake component</h2>
+  </div>
+);
+
+const DoubleFake = styled(Fake)`
+  h2 {
+    color: red;
+  }
+`;
+
+ <DoubleFake />
+  <Fake />
+
+7--

@@ -3,6 +3,12 @@ import styled from "styled-components";
 import logo from "./logo.svg";
 import "./App.css";
 
+const Fake = ({ className }) => (
+  <div className={className}>
+    <h2>I'm a fake component</h2>
+  </div>
+);
+
 const Heading = styled.h1`
   font-size: 4rem;
 `;
@@ -15,15 +21,25 @@ const Button = styled.button`
   color: ${color};
   font-size: 2rem;
   border: none;
-  background: ${({ type }) => (type === "cancel" ? "tomato" : "indigo")};
+  background: indigo;
+`;
+
+const CancelButton = styled(Button)`
+  background: tomato;
 `;
 
 const AppWrapper = styled.div`
   header {
     background: teal;
-    &:hover {
-      background: red;
-    }
+  }
+  ${Button} {
+    margin-bottom: 4rem;
+  }
+`;
+
+const DoubleFake = styled(Fake)`
+  h2 {
+    color: red;
   }
 `;
 
@@ -34,10 +50,12 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Button>Save</Button>
+          <DoubleFake />
+          <Fake />
           <Heading>
             Edit <code>src/App.js</code> and save to reload.
           </Heading>
-          <Button type="cancel">Cancel</Button>
+          <CancelButton>Cancel</CancelButton>
           <a
             className="App-link"
             href="https://reactjs.org"
