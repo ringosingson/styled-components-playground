@@ -42,6 +42,20 @@ const Fake = ({ className }) => (
   </div>
 );
 
+// CSS Helper
+// Needed for props in mixins
+const fixedTop = css`
+  position: fixed;
+  top: ${({ top }) => top + "px"};
+  left: 0;
+`;
+
+// const fixedTop = `
+//   position: fixed;
+//   top: ${({ top }) => top + 'px'};
+//   left: 0;
+// `;
+
 const Heading = styled.h1`
   font-size: 4rem;
   ${above.med`
@@ -62,6 +76,7 @@ const Button = styled.button`
 
 const CancelButton = styled(Button)`
   background: tomato;
+  ${fixedTop};
 `;
 
 const AppWrapper = styled.div`
@@ -91,7 +106,7 @@ class App extends Component {
           <Heading>
             Edit <code>src/App.js</code> and save to reload.
           </Heading>
-          <CancelButton>Cancel</CancelButton>
+          <CancelButton top="100">Cancel</CancelButton>
           <a
             className="App-link"
             href="https://reactjs.org"

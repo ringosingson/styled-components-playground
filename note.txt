@@ -106,3 +106,13 @@ const Heading = styled.h1`
     color: blue;
   `}
 `;
+
+8--
+
+// CSS Helper
+// Needed for props in mixins(string bou ahile man ngailo, function,props ho hile mandi)
+const fixedTop = css`
+  position: fixed;
+  top: ${({ top }) => top + "px"};
+  left: 0;
+`;
