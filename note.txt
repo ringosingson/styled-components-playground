@@ -27,3 +27,35 @@ background: ${({ type }) => (type === "cancel" ? "tomato" : "indigo")};
 
 <Button>Save</Button>
 <Button type="cancel">Cancel</Button>
+
+5--
+
+const color = "white"; //variable example
+ color: ${color};
+
+ nesting and parent relation--
+ const AppWrapper = styled.div`
+  header {
+    background: teal;
+    &:hover {
+      background: red;
+    }
+  }
+`;
+
+ <AppWrapper>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Heading>
+            Edit <code>src/App.js</code> and save to reload.
+          </Heading>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+  </AppWrapper>

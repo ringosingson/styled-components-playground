@@ -7,19 +7,30 @@ const Heading = styled.h1`
   font-size: 4rem;
 `;
 
+const color = "white"; //variable example
+
 const Button = styled.button`
   padding: 5px 10px;
   border-radius: 4px;
-  color: white;
+  color: ${color};
   font-size: 2rem;
   border: none;
   background: ${({ type }) => (type === "cancel" ? "tomato" : "indigo")};
 `;
 
+const AppWrapper = styled.div`
+  header {
+    background: teal;
+    &:hover {
+      background: red;
+    }
+  }
+`;
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Button>Save</Button>
@@ -36,7 +47,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
-      </div>
+      </AppWrapper>
     );
   }
 }
