@@ -16,3 +16,14 @@ and wrap it where you want to style
  <Heading>
      Edit <code>src/App.js</code> and save to reload.
 </Heading>
+
+4--
+
+passing props in styled components
+
+background: ${({ type }) => (type === "cancel" ? "tomato" : "indigo")};
+//javascript works inside of styled components
+//if props is cancel den color is tomato if not indigo (if two button is dre)
+
+<Button>Save</Button>
+<Button type="cancel">Cancel</Button>
