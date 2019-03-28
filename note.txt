@@ -138,3 +138,8 @@ export * from './Buttons';
 
 hitia akibol le a folder chan bou import thei
 code lhom
+
+11-- 
+organize code part 2
+if styled components is to be use in only one file
+like Header.js then code the styled it in file itself
