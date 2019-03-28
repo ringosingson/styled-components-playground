@@ -116,3 +116,12 @@ const fixedTop = css`
   top: ${({ top }) => top + "px"};
   left: 0;
 `;
+
+9--
+global style -- prefer it in the root component
+
+creat global.js file
+import { createGlobalStyle } from 'styled-components';
+
+import in App.js
+//dont simpl use global style
