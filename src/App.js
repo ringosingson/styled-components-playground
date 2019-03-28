@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import logo from "./logo.svg";
 
 import GlobalStyle from "./Global";
-
-const size = {
-  small: 400,
-  med: 960,
-  large: 1140
-};
+import { Heading, Button, CancelButton } from "./elements";
 
 // const above = Object.keys(size).reduce((acc, label) => {
 //   acc[label] = (...args) => css`
@@ -18,15 +13,6 @@ const size = {
 //   `;
 //   return acc;
 // }, {});
-
-const above = Object.keys(size).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${size[label] / 16}em) {
-      ${css(...args)}
-    }
-  `;
-  return acc;
-}, {});
 
 /*const below = Object.keys(size).reduce((acc, label) => {
   acc[label] = (...args) => css`
@@ -45,40 +31,13 @@ const Fake = ({ className }) => (
 
 // CSS Helper
 // Needed for props in mixins
-const fixedTop = css`
-  position: fixed;
-  top: ${({ top }) => top + "px"};
-  left: 0;
-`;
-
 // const fixedTop = `
 //   position: fixed;
 //   top: ${({ top }) => top + 'px'};
 //   left: 0;
 // `;
 
-const Heading = styled.h1`
-  font-size: 4rem;
-  ${above.med`
-    color: blue;
-  `}
-`;
-
-const color = "white"; //variable example
-
-const Button = styled.button`
-  padding: 5px 10px;
-  border-radius: 4px;
-  color: ${color};
-  font-size: 2rem;
-  border: none;
-  background: indigo;
-`;
-
-const CancelButton = styled(Button)`
-  background: tomato;
-  ${fixedTop};
-`;
+//const color = "white"; //variable example
 
 const AppWrapper = styled.div`
   header {

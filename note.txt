@@ -125,3 +125,16 @@ import { createGlobalStyle } from 'styled-components';
 
 import in App.js
 //dont simpl use global style
+
+10--
+styled components organization
+create two folder elements and utilities inside src
+
+in App.js
+import { Heading, Button, CancelButton } from './elements';
+code alhom na hi index.js aki create jeh
+export * from './Headings';
+export * from './Buttons';
+
+hitia akibol le a folder chan bou import thei
+code lhom
