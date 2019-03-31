@@ -155,3 +155,10 @@ read the doc for further information
 17--
 npm install styled-components-modifiers --save
 only one props for passing many style
+
+skip 19--
+
+20--
+npm install --save-dev babel-plugin-styled-components babel-plugin-macros
+
+...babel-plugin-macros: with dis babel rc file is not needed
