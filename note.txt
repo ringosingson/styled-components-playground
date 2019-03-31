@@ -143,3 +143,11 @@ code lhom
 organize code part 2
 if styled components is to be use in only one file
 like Header.js then code the styled it in file itself
+
+16--
+using styled-components miss out something dats in sass
+like using color function so we use polished library
+-- npm install --save polished
+can use many thing like normalize , lighten etc
+polished.js.org
+read the doc for further information

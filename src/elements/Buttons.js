@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lighten } from "polished";
 import { teal, elevation } from "../utilities";
 
 export const Button = styled.button`
@@ -11,6 +12,7 @@ export const Button = styled.button`
   background: ${teal};
   ${elevation[1]};
   &:hover {
+    background: ${lighten(0.2, teal)};
     ${elevation[2]};
   }
   ${({ size }) => {
