@@ -7,6 +7,7 @@ export const Button = styled.button`
   color: white;
   font-size: 2rem;
   border: none;
+  transition: 0.3s ease box-shadow;
   background: ${teal};
   ${elevation[1]};
   &:hover {

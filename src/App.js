@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./layouts/Header";
 import GlobalStyle from "./Global";
+import { Button, CancelButton } from "./elements";
 
 // const above = Object.keys(size).reduce((acc, label) => {
 //   acc[label] = (...args) => css`
@@ -36,6 +37,11 @@ class App extends Component {
       <div>
         <Header />
         <GlobalStyle />
+        <Button>Say Hello</Button>
+        <Button type="cancel">Say Hello</Button>
+        <CancelButton>Don't Say Hello</CancelButton>
+        <Button size="small">Say Hello</Button>
+        <CancelButton size="small">Don't Say Hello</CancelButton>
       </div>
     );
   }
