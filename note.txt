@@ -151,3 +151,7 @@ like using color function so we use polished library
 can use many thing like normalize , lighten etc
 polished.js.org
 read the doc for further information
+
+17--
+npm install styled-components-modifiers --save
+only one props for passing many style
